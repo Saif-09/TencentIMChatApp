@@ -45,7 +45,11 @@ export const useChat = () => {
         const systemVersion = DeviceInfo.getSystemVersion();
         console.log(`User ID: ${userID}`);
         console.log(`Device: ${deviceName} - ${systemName} ${systemVersion}`);
-        Alert.alert(`To start a chat, enter the receiver’s UserID below. Share your UserID (${userID}) with the other user`);
+        Alert.alert(
+            'Start a Chat',
+            `To start a chat, enter the receiver’s UserID below.\nShare your UserID (${userID}) with the other user.`,
+            [{ text: 'OK' }]
+        );
     };
 
     const initSDK = async (userID, userSig) => {

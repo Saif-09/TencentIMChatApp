@@ -40,7 +40,7 @@ const App = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.headerTitle}>Tencent Chat 📨</Text>
+        <Text style={styles.headerTitle}>Tencent Chat ✉️</Text>
         <Text style={styles.userID}>User ID: {userID}</Text>
       </View>
       <FlatList
@@ -52,7 +52,7 @@ const App = () => {
       />
       <View style={styles.inputContainer}>
         <TextInput
-          placeholder="Receiver UserID"
+          placeholder="Recv UserID"
           value={receiverID}
           onChangeText={setReceiverID}
           style={styles.input}
@@ -106,8 +106,9 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
   userID: {
-    color: '#ffffff',
+    color: 'white',
     fontSize: 14,
+    fontWeight:'600'
   },
   messageList: {
     flex: 1,
@@ -120,7 +121,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     paddingVertical: 8,
-    paddingHorizontal: 16,
+    paddingHorizontal: 8,
     backgroundColor: '#ffffff',
     borderTopWidth: 1,
     borderTopColor: '#ddd',
@@ -134,12 +135,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#f9f9f9',
     borderRadius: 25,
-    paddingHorizontal: 16,
-    paddingVertical: 12,
+    paddingHorizontal: 20,
+    // paddingLeft:25,
+    paddingVertical: 8,
     marginRight: 8,
     borderWidth: 1,
     borderColor: '#ccc',
-    fontSize: 16,
+    fontSize: 12,
+    color:'black'
   },
   sendButton: {
     backgroundColor: '#4a90e2',
